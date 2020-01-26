@@ -14,9 +14,11 @@ The debug of memory leak can be found [here](https://docs.microsoft.com/en-us/do
 
 ### Kubernetes flow
 
-    kubectl exec <pod-name> -n <namespace> -it -- /bin/bash
+    kubectl exec pod-name -n namespace -it -- /bin/bash
 Where **pod-name** is the pod of the memory leak application and **namespace** where the pod was deployed 
 
 ### Docker flow 
 
-    docker exec <container-id> -it /bin/bash
+    docker exec container-id -it /bin/bash
+
+Where **container-id** is the container that is running on your local machine.
