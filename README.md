@@ -2,6 +2,8 @@
 
 The purpose of the project is how to debug / track memory leak in applicaton using [dotnet-dump](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-dump) and [dotnet-counters](https://docs.microsoft.com/en-us/dotnet/core/diagnostics/dotnet-counters) in Docker / Kubernetes
 
-Also how to help / guide sysadmins in running a set of commands in a more easy way.
+The example project is based on the [sample project](https://github.com/dotnet/samples/tree/master/core/diagnostics/DiagnosticScenarios)
+
+
 
 
