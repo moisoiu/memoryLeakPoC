@@ -1,0 +1,11 @@
+﻿apiVersion: v1
+kind: Service
+metadata:
+  name: medical-web-service 
+  labels:
+    version: medical-web
+spec:
+  selector:
+    app: medical-web
+  ports:
+  - port: 80

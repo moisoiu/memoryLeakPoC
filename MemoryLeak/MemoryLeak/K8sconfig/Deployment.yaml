@@ -1,0 +1,41 @@
+﻿apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: memoryleak-deployment
+spec:
+  selector:
+    matchLabels:
+      app: memoryleak-web
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        app: memoryleak-web
+    spec:
+      containers:
+      - name: memoryleak-web-container
+        image: #{imageName}#
+        resources:
+          limits:
+            memory: 800Mi
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          initialDelaySeconds: 15
+          periodSeconds: 5
+      imagePullSecrets:
+      - name: azuredockerregistry        
