@@ -1,11 +1,11 @@
 ﻿apiVersion: v1
 kind: Service
 metadata:
-  name: medical-web-service 
+  name: memoryleak-web-service 
   labels:
-    version: medical-web
+    version: memoryleak-web
 spec:
   selector:
-    app: medical-web
+    app: memoryleak-web
   ports:
   - port: 80
