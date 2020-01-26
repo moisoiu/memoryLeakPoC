@@ -5,5 +5,5 @@ The purpose of the project is how to debug / track memory leak in applicaton usi
 The example project is based on the [sample project](https://github.com/dotnet/samples/tree/master/core/diagnostics/DiagnosticScenarios)
 
 
-
+[![Build status](https://dev.azure.com/MirceaMProjects/NetCore-Microservices/_apis/build/status/MemoryLeak-Git)](https://dev.azure.com/MirceaMProjects/NetCore-Microservices/_build/latest?definitionId=11)
 
